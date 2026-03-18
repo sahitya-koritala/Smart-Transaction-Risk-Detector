@@ -12,7 +12,7 @@ This project is a python based application designed to create a system to analyz
 
 ## Features
 - Accepts multiple transaction inputs
-- Classifies transactions into :
+- Classifies transactions into:
   - Normal
   - Large
   - High Risk
@@ -22,11 +22,10 @@ This project is a python based application designed to create a system to analyz
   - Large spending
   - Suspicious activity
 
-= Provides final risk classification:
+- Provides final risk classification:
   - Low Risk
   - Moderate Risk
   - High Risk
-
 - Displays a personalized suggestion based on spending
 
 ## Algorithm (Steps)
@@ -48,7 +47,7 @@ This project is a python based application designed to create a system to analyz
 ## Concepts Used
 
 - Lists
-- Loops (for)
+- Loops
 - Conditional Statements
 - List Comprehension
 - Dictionary
@@ -56,9 +55,29 @@ This project is a python based application designed to create a system to analyz
 
 ## Pattern Detection Rules
 
-- Frequent Transactions → More than 5 transactions
-- Large Spending → Total amount > 5000
-- Suspicious Pattern → 3 or more high-risk transactions
+- Frequent Transactions -> More than 5 transactions
+- Large Spending -> Total amount > 5000
+- Suspicious Pattern -> 3 or more high-risk transactions
+
+## Sample Input
+- Enter number of transactions: 6
+  - Enter transaction 1: -10
+  - Enter transaction 2: 0
+  - Enter transaction 3: 200
+  - Enter transaction 4: 1800
+  - Enter transaction 5: 2500
+  - Enter transaction 6: 50
+
+## Sample Output 
+- Invalid transactions detected !!
+- Suggestion: Keep monitoring your spending
+
+- Categorized Transactions:
+ {'normal': [200, 50], 'large': [1800], 'high_risk': [2500], 'invalid': [-10, 0] }
+
+- Total Transaction Value: 4550
+- Number of Transactions: 6
+- Final Risk Classification: Moderate Risk
 
 ## Personalization Feature
 The program provides customized feedback based on the user’s transaction behavior. If invalid transactions are detected, it alerts the user about incorrect inputs. It also gives suggestions based on total spending: low spending indicates good control, moderate spending suggests monitoring expenses, and high spending warns the user to be cautious. This makes the program more interactive and informative.
